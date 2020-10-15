@@ -20,7 +20,15 @@
                     </div>
                 </div>
             {% empty %}
-            <h2>No Semester</h2>
+                <div class="col-md-4 mb-3 mb-md-1 mx-auto">
+                    <div class="card py-2 h-100">
+                        <div class="card-body text-center">
+                            <h4 class="m-0">Belum ada matkul</h4>
+                            <hr class="my-4" />
+                            <a href="{% url 'tambah_semester' %}">Tambah</a>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
             </div>
         </div>

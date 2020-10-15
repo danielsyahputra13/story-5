@@ -1,6 +1,7 @@
+from django.http import request
 from django.shortcuts import render, redirect
 from .models import Semester, MataKuliah, TugasMatkul
-from .forms import MataKuliahForm
+from .forms import MataKuliahForm, SemesterForm
 
 # Create your views here.
 def index(request):
@@ -27,5 +28,17 @@ def tambah(request):
     else:
         form = MataKuliahForm()
         return render(request, 'matkul/tambah.html', {
+            'form': form
+        })
+
+def tambah_semester(request):
+    if request.method == "POST":
+        form = SemesterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('tambah_semester')
+    else:
+        form = SemesterForm()
+        return render(request, 'matkul/tambah_semester.html', {
             'form': form
         })
