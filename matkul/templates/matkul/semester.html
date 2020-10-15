@@ -15,7 +15,8 @@
                             <div class="card-body text-center">
                                 <h4 class="m-0">{{course.kode_matkul}}</h4>
                                 <hr class="my-4" />
-                                <a href="{% url 'detail' course.id %}">Detail</a>
+                                <a href="{% url 'detail' course.id %}">Detail</a> | 
+                                <a href="{% url 'hapus' course.id %}">Hapus</a>
                             </div>
                         </div>
                     </div>

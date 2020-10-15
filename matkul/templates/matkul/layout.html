@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
             <div class="container">
                 <!--Navbar brand-->
-                <a class="navbar-brand font-weight-bold">Mata Kuliah</a>
+                <a href="{% url 'index' %}" class="navbar-brand font-weight-bold">Mata Kuliah</a>
 
                 <!--Collapse button if we shrink to smaller screen-->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,9 +30,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link font-weight-bold" href="{% url 'index' %}">Lihat Mata Kuliah</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link font-weight-bold" href="#">Hapus Mata Kuliah</a>
                         </li>
                     </ul>
                 </div>

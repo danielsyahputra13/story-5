@@ -49,3 +49,8 @@ def detail(request, pk):
     return render(request, 'matkul/detail.html', {
         'course': matkul
     })
+
+def hapus(request, pk):
+    matkul = MataKuliah.objects.get(pk=pk)
+    matkul.delete()
+    return redirect('index')

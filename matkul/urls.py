@@ -9,4 +9,5 @@ urlpatterns = [
     path("<int:semester_id>", views.semester, name="semester"),
     path('tambah_semester/', views.tambah_semester, name='tambah_semester'),
     path('detail/<int:pk>', views.detail, name='detail'),
+    path('hapus/<int:pk>', views.hapus, name='hapus'),
 ]
