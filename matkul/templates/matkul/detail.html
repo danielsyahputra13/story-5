@@ -1,0 +1,10 @@
+<ul>
+        {% for course in courses %}
+            <li>Nama : {{course.nama_matkul}}</li>
+            <li>Kode : {{course.kode_matkul}}</li>
+            <li>SKS  : {{course.jumlah_sks}}</li>
+            <li>Dosen : {{course.dosen_pengajar}}</li>
+            <li>Deskripsi : {{course.deskripsi}}</li>
+            <li>Ruangan: {{course.ruang_kelas}}</li>
+        {% endfor %}
+    </ul>

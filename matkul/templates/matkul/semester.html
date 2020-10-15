@@ -1,0 +1,37 @@
+{% extends 'matkul/layout.html' %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center info mb-3 mt-3">
+                    <h1 class="font-weight-bold">{{semester}}</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class='row'>
+                {% for course in courses %}
+                    <div class="col-md-4 mb-3 mb-md-1">
+                        <div class="card py-2 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="m-0">{{course.kode_matkul}}</h4>
+                                <hr class="my-4" />
+                                <a href="#">Detail</a>
+                            </div>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="col-md-4 mb-3 mb-md-1 mx-auto">
+                        <div class="card py-2 h-100">
+                            <div class="card-body text-center">
+                                <h4 class="m-0">Belum ada matkul</h4>
+                                <hr class="my-4" />
+                                <a href="{% url 'tambah' %}">Tambah</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    <a href="{% url 'index' %}">Back to Home</a>
+{% endblock  %}

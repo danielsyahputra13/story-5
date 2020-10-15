@@ -1,0 +1,28 @@
+{% extends 'matkul/layout.html' %}
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center info mb-3">
+                    <h1 class="font-weight-bold">Daftar Semester</h1>
+                    <hr>
+                </div>
+            </div>
+            <div class='row'>
+            {% for term in terms %}
+                <div class="col-md-3 mb-3 mb-md-1">
+                    <div class="card py-2 h-100">
+                        <div class="card-body text-center">
+                            <h4 class="m-0">{{term}}</h4>
+                            <hr class="my-4" />
+                            <a href="{% url 'semester' term.semester_id %}">Buka</a>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+            <h2>No Semester</h2>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock  %}

@@ -1,0 +1,19 @@
+.navbar {
+    background-color: #212529;
+}
+
+header .navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration-line: none;
+    font-weight: bold;
+}
+
+hr {
+    width: 10%;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-color: #43bede;
+}
