@@ -1,10 +1,13 @@
-<ul>
-        {% for course in courses %}
-            <li>Nama : {{course.nama_matkul}}</li>
-            <li>Kode : {{course.kode_matkul}}</li>
-            <li>SKS  : {{course.jumlah_sks}}</li>
-            <li>Dosen : {{course.dosen_pengajar}}</li>
-            <li>Deskripsi : {{course.deskripsi}}</li>
-            <li>Ruangan: {{course.ruang_kelas}}</li>
-        {% endfor %}
-    </ul>
+{% extends 'matkul/layout.html' %}
+{% block content %}
+    <div class='container'>
+        <div class="jumbotron">
+            <h1 class="display-4">{{course.nama_matkul}}</h1>
+            <p class="lead my-3">{{course.deskripsi}}</p>
+            <hr class="my-1">
+            <p>{{course.kode_matkul}} ( {{course.jumlah_sks}} sks )</p>
+            <p>Dosen : {{course.dosen_pengajar}}</p>
+            <p>Ruangan: {{course.ruang_kelass}}</p>
+        </div>
+    </div>
+{% endblock  %}

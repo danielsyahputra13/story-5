@@ -42,3 +42,10 @@ def tambah_semester(request):
         return render(request, 'matkul/tambah_semester.html', {
             'form': form
         })
+
+
+def detail(request, pk):
+    matkul = MataKuliah.objects.get(pk=pk)
+    return render(request, 'matkul/detail.html', {
+        'course': matkul
+    })
