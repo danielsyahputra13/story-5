@@ -36,7 +36,7 @@ def tambah_semester(request):
         form = SemesterForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('tambah_semester')
+            return redirect('index')
     else:
         form = SemesterForm()
         return render(request, 'matkul/tambah_semester.html', {
